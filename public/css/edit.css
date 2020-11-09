@@ -1,0 +1,95 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  width: 100%;
+  height: 500px;
+  background-color: #E2E2E2;
+}
+
+.one {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.one>span {
+  text-align: center;
+  position: absolute;
+  line-height: 50px;
+  color: #6B8291;
+  font-size: 18px;
+  width: 250px;
+  border-bottom: 4px blue solid;
+}
+
+
+input {
+  width: 240px;
+  height: 50px;
+  color: #778D9A;
+  margin-right: 70px;
+}
+
+.loc div {
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  background-color: white;
+  line-height: 50px;
+  color: #778D9A;
+
+}
+
+.masod1 {
+  font-size: 17px;
+  width: 1250px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  top: 10%;
+}
+
+.masod2 {
+  font-size: 17px;
+  width: 1250px;
+  height: 270px;
+  line-height: 70px;
+  padding-left: 30px;
+  text-align: left;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+.masod2 div {
+  text-align: center;
+}
+div>button {
+  width: 170px;
+  height: 50px;
+  position: absolute;
+  top: 52%;
+  left: 85%;
+  background-color: orangered;
+  color: white;
+  font-size: 25px;
+}
+
+.ps {
+  width: 370px;
+  height: 340px;
+  background-image: url('/img/photo.jpg');
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.sele{
+  width: 240px;
+  height: 50px;
+  margin-right: 70px;
+}

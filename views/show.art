@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1912222_v5olmnsz4eb.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="javascript:;">班级信息管理平台</a>
+    </div>
+    <div class="header_right">
+      <ul>
+        <a href="/router/loginOut">
+          <li>安全退出</li>
+        </a>
+        <a href="">
+          <li>设置</li>
+        </a>
+        <a href="">
+          <li>消息</li>
+        </a>
+      </ul>
+    </div>
+  </header>
+
+  <aside>
+    <div class="current_user">
+      当前用户: {{userinfo && userinfo.username}}
+    </div>
+    <ul>
+
+      <a href="/router/show?classId=1" class={{classId == 1 ? "current" : ''}}><span class="iconfont icon-shuxingliebiaoxiangqing"></span>01班</a>
+      <a href="/router/show?classId=2" class={{classId == 2 ? "current" : ''}}><span class="iconfont icon-shuxingliebiaoxiangqing"></span>02班</a>
+    </ul>
+  </aside>
+
+  <div class="right">
+    <div class="top_font">当前：首页-{{classId}}班级</div>
+    <div class="search">
+      <div>0{{classId}}班</div>
+      <div class="search_input">
+        <input type="text" name="" id="" placeholder="用户名">
+        <button>
+          <span class=" iconfont icon-search"></span>
+        </button>
+      </div>
+    </div>
+    <div class="addBtn w">
+      <div class="main">
+        <a href="/router/edit" class="btn">添加</a>
+      </div>
+    </div>
+    <div class="bd_index w">
+      <form action="">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 2%;">
+                <input type="checkbox">
+              </th>
+              <th style="width: 10%;">姓名</th>
+              <th style="width: 10%;">学号</th>
+              <th style="width: 15%;">手机号</th>
+              <th style="width: 8%;">性别</th>
+              <th style="width: 8%;">年龄</th>
+              <th style="width: 20%;">专业</th>
+              <th style="width: 27%;">操作</th>
+            </tr>
+          </thead>
+
+          <tbody>
+          {{each info}}
+            <tr>
+              <td style="width: 2%;">
+                <input type="checkbox">
+              </td>
+              <td style="width: 10%;">{{$value.username}}</td>
+              <td style="width: 10%;">{{$value.stuId}}</td>
+              <td style="width: 15%;">{{$value.tel}}</td>
+              <td style="width: 8%;">{{$value.sex == 0 ? '男' : '女'}}</td>
+              <td style="width: 8%;">{{$value.age}}</td>
+              <td style="width: 20%;">{{$value.profession}}</td>
+              <td style="width: 27%;">
+                <div class="cz">
+                  <a href="/router/edit?id={{@$value._id}}">编辑</a>
+                  <a href="/router/del?id={{@$value._id}}">删除</a
+                </div>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/edit.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="one"><span>{{msg}}学员信息</span></div>
+        <form action="{{link}}" method="post" >
+            <div class="ps"></div>
+            <div class="masod1">
+                <label class="loc">
+                    <div>姓名</div>
+                </label>
+                <input type="text"  name="username" value={{info && info.username}}>
+                <label class="loc">
+                    <div>学号</div>
+                </label>
+                <input type="text" name="stuId" value={{info && info.stuId}} >
+                <label class="loc">
+                    <div>手机号</div>
+                </label>
+                <input type="text" name="tel" value={{info && info.tel}} >
+            </div>
+            <div class="masod2">
+                <label class="loc">
+                    <div>性别</div>
+                </label>
+                <select class="sele" name="sex">
+                  <option  value="0"  {{info && info.sex == 0 ? "selected" : ''}} >男</option>
+                  <option  value="1" {{info && info.sex == 1 ? "selected" : ''}} >女</option>
+                </select>
+                <label class="loc">
+                    <div>年龄</div>
+                </label>
+                <input type="text" name="age" value={{info && info.age}} >
+                <label class="loc">
+                    <div>专业</div>
+                </label>
+                <input type="text" name="profession" value={{info && info.profession}}></div>
+                <input type="hidden" name="password" value=1>
+                <input type="hidden" name="classId" value=1>
+            <div>
+                <button type="submit" class="btn btn-primary">{{msg}}</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
